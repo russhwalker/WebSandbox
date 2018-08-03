@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select2Test</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../node_modules/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            padding-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-target="#navbar"
+                    data-toggle="collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Select2Test</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
+                        <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+                            <li>
+                                <a href="#">Link 2.1</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 2.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 2.3</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="l-header">
+        <input type="hidden" id="employeeUserNamesJSON" name="employeeUserNamesJSON" value='{ "employees": [ {"EmployeeId": 1, "FullName" : "John Doe", "UserName": "doej"}, {"EmployeeId": 3, "FullName" : "Bill Williams", "UserName": "williamsb"}, {"EmployeeId": 47, "FullName" : "Tim Smith", "UserName": "smitht"} ]}'
+        />
+        <form>
+            <div class="row">
+                <div class="col-md-3 employee-select" style="display: none;">
+                    <label class="control-label" for="employeeAId">Employee A:</label>
+                    <select class="form-control employee" name='employeeAId' id='employeeAId' disabled>
+                        <option value=""></option>
+                        <option value="1" selected>John Doe</option>
+                        <option value="3">Bill Williams</option>
+                        <option value="47">Tim Smith</option>
+                    </select>
+                </div>
+                <div class="col-md-3 employee-link">
+                    <label class="control-label">Employee A:</label>
+                    <a href="" id="employeeAIdLink"></a>
+                </div>
+                <div class="col-md-3 employee-select" style="display: none;">
+                    <label class="control-label" for="employeeBId">Employee B:</label>
+                    <select class="form-control employee" name='employeeBId' id='employeeBId' disabled>
+                        <option value=""></option>
+                        <option value="1">John Doe</option>
+                        <option value="3" selected>Bill Williams</option>
+                        <option value="47">Tim Smith</option>
+                    </select>
+                </div>
+                <div class="col-md-3 employee-link">
+                    <label class="control-label">Employee B:</label>
+                    <a href="" id="employeeBIdLink"></a>
+                </div>
+                <div class="col-md-3 employee-select" style="display: none;">
+                    <label class="control-label" for="employeeCId">Employee C:</label>
+                    <select class="form-control employee" name='employeeCId' id='employeeCId' disabled>
+                        <option value=""></option>
+                        <option value="1">John Doe</option>
+                        <option value="3">Bill Williams</option>
+                        <option value="47" selected>Tim Smith</option>
+                    </select>
+                </div>
+                <div class="col-md-3 employee-link">
+                    <label class="control-label">Employee C:</label>
+                    <a href="" id="employeeCIdLink"></a>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-info edit">Edit</button>
+                    <button class="btn cancel" style="display: none;">Cancel</button>
+                    <button class="btn btn-primary save" type="submit" style="display: none;">Save</button>
+                </div>
+            </div>
+            <hr />
+        </form>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap//dist/js/bootstrap.js"></script>
+    <script src="../node_modules/select2/dist/js/select2.js"></script>
+    <script src="site.js"></script>
+</body>
+
+</html>

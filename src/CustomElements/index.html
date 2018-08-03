@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FleetWeb</title>
+
+    <style>
+        div,
+        special-thing {
+            border: solid 1px black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id='mydiv'>
+
+    </div>
+
+    <special-thing>sfd</special-thing>
+
+    <script>
+        class SpecialThing extends HTMLParagraphElement {
+            constructor() {
+                super();
+            }
+        }
+        document.getElementById('mydiv').innerText = 'here is mydiv';
+        customElements.define('special-thing', SpecialThing, { extends: 'div' });
+    </script>
+
+</body>
+
+</html>
